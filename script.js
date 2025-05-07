@@ -4,6 +4,7 @@ const formContainer = document.getElementById('form-container');
 const submitBtn = document.querySelector('button');
 const password = document.getElementById('password');
 const confirmpw = document.getElementById('confirmPassword');
+const form = document.querySelector('form');
 
 // Loading Screen
 window.onload = () => {
@@ -32,3 +33,11 @@ function blink() {
   }, 150)
 }
 setTimeout(blink, 2000);
+
+// Form
+form.addEventListener('submit', event => {
+  if (password !== confirmpw) {
+    event.preventDefault;
+    alert("Passwords don't match!");
+  }
+})
