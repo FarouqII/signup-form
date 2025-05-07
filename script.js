@@ -11,10 +11,10 @@ window.onload = () => {
     setTimeout(() => {
       if (window.innerWidth >= 768) {
         logo.style.transform = "translate(50vw, 50vh) translate(-50%, -300%) scale(0.8)";
-        frame.style.opacity = '1';
       } else if (window.innerWidth < 768) {
         logo.style.transform = "translate(50vw, 50vh) translate(-50%, -200%) scale(0.5)";
       }
+      if (window.innerWidth > 1000) frame.style.opacity = '1';
       setTimeout(() => formContainer.style.opacity = '1', 750);
     }, 2000);
   };
@@ -37,7 +37,7 @@ setTimeout(blink, 2000);
 // Form
 form.addEventListener('submit', event => {
   if (password !== confirmpw) {
-    event.preventDefault;
+    event.preventDefault();
     alert("Passwords don't match!");
   }
 })
