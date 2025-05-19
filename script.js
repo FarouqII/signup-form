@@ -12,6 +12,9 @@ window.onload = () => {
       if (window.innerWidth >= 768) {
         logo.style.transform = "translate(50vw, 50vh) translate(-50%, -300%) scale(0.8)";
       } else if (window.innerWidth < 768) {
+        if (window.innerWidth < 380) {
+        logo.style.transform = "translate(50vw, 50vh) translate(-50%, -305%) scale(0.5)";
+      } else
         logo.style.transform = "translate(50vw, 50vh) translate(-50%, -200%) scale(0.5)";
       }
       if (window.innerWidth > 1000) frame.style.opacity = '1';
